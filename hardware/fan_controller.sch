@@ -1,0 +1,429 @@
+EESchema Schematic File Version 2  date Tue 18 Dec 2012 11:55:45 PM EST
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:fan_controller-cache
+EELAYER 27 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 6
+Title ""
+Date "19 dec 2012"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L VCC #PWR2
+U 1 1 50D1066D
+P 3100 5900
+F 0 "#PWR2" H 3100 6000 30  0001 C CNN
+F 1 "VCC" H 3100 6000 30  0000 C CNN
+	1    3100 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L BARREL_JACK CON1
+U 1 1 50D124E9
+P 5350 6700
+F 0 "CON1" H 5350 6950 60  0000 C CNN
+F 1 "BARREL_JACK" H 5350 6500 60  0000 C CNN
+	1    5350 6700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR4
+U 1 1 50D1251B
+P 4300 7250
+F 0 "#PWR4" H 4300 7250 30  0001 C CNN
+F 1 "GND" H 4300 7180 30  0001 C CNN
+	1    4300 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 6800 5050 6800
+Wire Wire Line
+	4300 6500 4300 7250
+Wire Wire Line
+	5050 6700 4300 6700
+Connection ~ 4300 6800
+Wire Wire Line
+	3950 6600 5050 6600
+Text Label 4600 6600 0    60   ~ 0
++5V
+$Comp
+L DIODESCH D1
+U 1 1 50D12653
+P 3750 6600
+F 0 "D1" H 3750 6700 40  0000 C CNN
+F 1 "1N5821" H 3750 6500 40  0000 C CNN
+	1    3750 6600
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_2 P1
+U 1 1 50D12690
+P 4200 6150
+F 0 "P1" V 4150 6150 40  0000 C CNN
+F 1 "PWR" V 4250 6150 40  0000 C CNN
+	1    4200 6150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 6500 4100 6600
+Connection ~ 4100 6600
+Connection ~ 4300 6700
+$Sheet
+S 5300 2500 1050 900 
+U 50D12A7F
+F0 "Microcontroller" 50
+F1 "micro_sheet.sch" 50
+F2 "ALERT" I R 6350 2950 60 
+F3 "PWM1" I R 6350 3150 60 
+F4 "PWM2" I R 6350 3250 60 
+F5 "SDA" I R 6350 2650 60 
+F6 "SCL" I R 6350 2750 60 
+F7 "RESET#" I L 5300 3000 60 
+F8 "RXD" I L 5300 2700 60 
+F9 "TXD" I L 5300 2800 60 
+$EndSheet
+$Sheet
+S 7150 2500 1100 650 
+U 50D12A81
+F0 "Temperature Sensor" 50
+F1 "temp_sensor_sheet.sch" 50
+F2 "SDA" I L 7150 2650 60 
+F3 "SCL" I L 7150 2750 60 
+F4 "ALERT" I L 7150 2950 60 
+$EndSheet
+$Sheet
+S 1350 6200 1100 750 
+U 50D12A83
+F0 "3V3 Supply" 50
+F1 "5V_to_3V3_supply.sch" 50
+F2 "VIN" I R 2450 6600 60 
+F3 "PG" I R 2450 6750 60 
+F4 "VOUT" I R 2450 6450 60 
+$EndSheet
+$Sheet
+S 1900 4500 1100 550 
+U 50D12A87
+F0 "12V Supply" 50
+F1 "5V_to_12V.sch" 50
+F2 "VOUT" I R 3000 4700 60 
+F3 "VIN" I R 3000 4850 60 
+$EndSheet
+Wire Wire Line
+	2450 6600 3550 6600
+Wire Wire Line
+	3100 6450 2450 6450
+Wire Wire Line
+	3100 5900 3100 6450
+Wire Wire Line
+	3400 6600 3400 4850
+Wire Wire Line
+	3400 4850 3000 4850
+Connection ~ 3400 6600
+$Comp
+L +12V #PWR3
+U 1 1 50D17C44
+P 3400 3950
+F 0 "#PWR3" H 3400 3900 20  0001 C CNN
+F 1 "+12V" H 3400 4050 30  0000 C CNN
+	1    3400 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 4700 3000 4700
+Wire Wire Line
+	3400 3950 3400 4700
+Wire Wire Line
+	6350 2650 7150 2650
+Wire Wire Line
+	6350 2750 7150 2750
+Wire Wire Line
+	6350 2950 7150 2950
+Wire Wire Line
+	4550 3000 5300 3000
+Text Label 4900 3000 0    60   ~ 0
+RESET#
+Wire Wire Line
+	6350 3150 6950 3150
+Wire Wire Line
+	6350 3250 6850 3250
+Text Label 6450 3150 0    60   ~ 0
+PWM1
+Text Label 6450 3250 0    60   ~ 0
+PWM2
+$Comp
+L CONN_2 P3
+U 1 1 50D2052A
+P 7800 3550
+F 0 "P3" V 7750 3550 40  0000 C CNN
+F 1 "FAN1" V 7850 3550 40  0000 C CNN
+	1    7800 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_2 P4
+U 1 1 50D20539
+P 8900 3550
+F 0 "P4" V 8850 3550 40  0000 C CNN
+F 1 "FAN2" V 8950 3550 40  0000 C CNN
+	1    8900 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MOSFET_P Q1
+U 1 1 50D20BB3
+P 7350 4600
+F 0 "Q1" H 7350 4790 60  0000 R CNN
+F 1 "MOSFET_P" H 7350 4420 60  0000 R CNN
+	1    7350 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L MOSFET_P Q2
+U 1 1 50D20C22
+P 8450 4700
+F 0 "Q2" H 8450 4890 60  0000 R CNN
+F 1 "MOSFET_P" H 8450 4520 60  0000 R CNN
+	1    8450 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 3150 6950 4000
+Wire Wire Line
+	6950 4000 7350 4000
+Wire Wire Line
+	7350 4000 7350 4400
+Wire Wire Line
+	6850 3250 6850 4100
+Wire Wire Line
+	6850 4100 8450 4100
+Wire Wire Line
+	8450 4100 8450 4500
+Wire Wire Line
+	7550 4700 7700 4700
+Wire Wire Line
+	7700 4700 7700 3900
+Wire Wire Line
+	8800 4800 8650 4800
+Wire Wire Line
+	8800 3900 8800 4800
+Wire Wire Line
+	7900 3900 7900 4900
+Wire Wire Line
+	7900 4900 9000 4900
+Wire Wire Line
+	9000 4900 9000 3900
+$Comp
+L GND #PWR8
+U 1 1 50D242C0
+P 8450 5300
+F 0 "#PWR8" H 8450 5300 30  0001 C CNN
+F 1 "GND" H 8450 5230 30  0001 C CNN
+	1    8450 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 4900 8450 5300
+Connection ~ 8450 4900
+Wire Wire Line
+	8250 4800 6900 4800
+Wire Wire Line
+	6900 4800 6900 4700
+Wire Wire Line
+	6550 4700 7150 4700
+Wire Wire Line
+	6550 4200 6550 4700
+Connection ~ 6900 4700
+$Comp
+L +12V #PWR6
+U 1 1 50D24E03
+P 6550 4200
+F 0 "#PWR6" H 6550 4150 20  0001 C CNN
+F 1 "+12V" H 6550 4300 30  0000 C CNN
+	1    6550 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_4 P2
+U 1 1 50D25A26
+P 6750 1250
+F 0 "P2" V 6700 1250 50  0000 C CNN
+F 1 "EXT_TEMP" V 6800 1250 50  0000 C CNN
+	1    6750 1250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 1600 6700 2650
+Connection ~ 6700 2650
+Wire Wire Line
+	6800 1600 6800 2750
+Connection ~ 6800 2750
+Wire Wire Line
+	6600 1600 6600 1750
+Wire Wire Line
+	6600 1750 6350 1750
+Wire Wire Line
+	6350 1750 6350 800 
+Wire Wire Line
+	6900 1600 6900 1750
+Wire Wire Line
+	6900 1750 7000 1750
+Wire Wire Line
+	7000 1750 7000 2100
+$Comp
+L GND #PWR7
+U 1 1 50D25C7E
+P 7000 2100
+F 0 "#PWR7" H 7000 2100 30  0001 C CNN
+F 1 "GND" H 7000 2030 30  0001 C CNN
+	1    7000 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR5
+U 1 1 50D25CF5
+P 6350 800
+F 0 "#PWR5" H 6350 900 30  0001 C CNN
+F 1 "VCC" H 6350 900 30  0000 C CNN
+	1    6350 800 
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 2750 2500 1050 850 
+U 50D26E53
+F0 "USB to Serial" 50
+F1 "ftdi_usbser.sch" 50
+F2 "TXD" I R 3800 2700 60 
+F3 "RXD" I R 3800 2800 60 
+F4 "RTS" I L 2750 2650 60 
+F5 "CTS" I L 2750 2750 60 
+F6 "DTR" I R 3800 3000 60 
+F7 "DCR" I L 2750 3000 60 
+F8 "DCD" I L 2750 3100 60 
+F9 "RI" I L 2750 3200 60 
+$EndSheet
+$Comp
+L C C1
+U 1 1 50D2C5AD
+P 4350 3000
+F 0 "C1" H 4400 3100 50  0000 L CNN
+F 1 "1nF" H 4400 2900 50  0000 L CNN
+	1    4350 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 3000 3800 3000
+Wire Wire Line
+	5300 2700 3800 2700
+Wire Wire Line
+	3800 2800 5300 2800
+$Comp
+L R R3
+U 1 1 50D2D6F6
+P 2350 3550
+F 0 "R3" V 2430 3550 50  0000 C CNN
+F 1 "4.7K" V 2350 3550 50  0000 C CNN
+	1    2350 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR1
+U 1 1 50D2D752
+P 2150 4150
+F 0 "#PWR1" H 2150 4150 30  0001 C CNN
+F 1 "GND" H 2150 4080 30  0001 C CNN
+	1    2150 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 2750 2350 2750
+Wire Wire Line
+	2350 2750 2350 3300
+$Comp
+L R R2
+U 1 1 50D2D864
+P 2150 3550
+F 0 "R2" V 2230 3550 50  0000 C CNN
+F 1 "4.7K" V 2150 3550 50  0000 C CNN
+	1    2150 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 50D2D873
+P 1950 3550
+F 0 "R1" V 2030 3550 50  0000 C CNN
+F 1 "4.7K" V 1950 3550 50  0000 C CNN
+	1    1950 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 4000 2350 3800
+Wire Wire Line
+	1950 4000 2350 4000
+Wire Wire Line
+	1950 4000 1950 3800
+Wire Wire Line
+	2150 3800 2150 4150
+Connection ~ 2150 4000
+Wire Wire Line
+	2750 3000 2150 3000
+Wire Wire Line
+	2150 3000 2150 3300
+Wire Wire Line
+	2750 3100 1950 3100
+Wire Wire Line
+	1950 3100 1950 3300
+NoConn ~ 2750 2650
+NoConn ~ 2750 3200
+$Comp
+L R R4
+U 1 1 50D3A861
+P 2900 6750
+F 0 "R4" V 2980 6750 50  0000 C CNN
+F 1 "0" V 2900 6750 50  0000 C CNN
+	1    2900 6750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 6750 2450 6750
+Wire Wire Line
+	3150 6750 3550 6750
+Text Label 3500 6750 2    60   ~ 0
+RESET#
+$EndSCHEMATC
