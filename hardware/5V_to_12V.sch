@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 18 Dec 2012 11:55:45 PM EST
+EESchema Schematic File Version 2  date Wed 19 Dec 2012 12:08:27 AM EST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -86,10 +86,10 @@ Wire Wire Line
 Wire Wire Line
 	5200 4750 5200 4600
 $Comp
-L GND #PWR19
+L GND #PWR019
 U 1 1 50D16A1E
 P 5300 5650
-F 0 "#PWR19" H 5300 5650 30  0001 C CNN
+F 0 "#PWR019" H 5300 5650 30  0001 C CNN
 F 1 "GND" H 5300 5580 30  0001 C CNN
 	1    5300 5650
 	1    0    0    -1  

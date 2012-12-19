@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 18 Dec 2012 11:55:45 PM EST
+EESchema Schematic File Version 2  date Wed 19 Dec 2012 12:08:27 AM EST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -54,10 +54,10 @@ F 1 "TPS62177" H 6000 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR18
+L GND #PWR018
 U 1 1 50D132CC
 P 5650 5050
-F 0 "#PWR18" H 5650 5050 30  0001 C CNN
+F 0 "#PWR018" H 5650 5050 30  0001 C CNN
 F 1 "GND" H 5650 4980 30  0001 C CNN
 	1    5650 5050
 	1    0    0    -1  

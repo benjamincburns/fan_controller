@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Tue 18 Dec 2012 11:55:45 PM EST
+EESchema Schematic File Version 2  date Wed 19 Dec 2012 12:15:27 AM EST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,12 +29,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:fan_controller-cache
+LIBS:ext_temp_sensor-cache
 EELAYER 27 0
 EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
-Sheet 3 6
+Sheet 3 2
 Title ""
 Date "19 dec 2012"
 Rev ""
@@ -45,19 +45,19 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L VCC #PWR16
+L VCC #PWR4
 U 1 1 50D12B1A
 P 5700 2200
-F 0 "#PWR16" H 5700 2300 30  0001 C CNN
+F 0 "#PWR4" H 5700 2300 30  0001 C CNN
 F 1 "VCC" H 5700 2300 30  0000 C CNN
 	1    5700 2200
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR17
+L GND #PWR5
 U 1 1 50D12B20
 P 5700 4900
-F 0 "#PWR17" H 5700 4900 30  0001 C CNN
+F 0 "#PWR5" H 5700 4900 30  0001 C CNN
 F 1 "GND" H 5700 4830 30  0001 C CNN
 	1    5700 4900
 	1    0    0    -1  
@@ -110,10 +110,10 @@ Wire Wire Line
 Wire Wire Line
 	4700 3050 5200 3050
 $Comp
-L GND #PWR15
+L GND #PWR3
 U 1 1 50D12B43
 P 4950 3250
-F 0 "#PWR15" H 4950 3250 30  0001 C CNN
+F 0 "#PWR3" H 4950 3250 30  0001 C CNN
 F 1 "GND" H 4950 3180 30  0001 C CNN
 	1    4950 3250
 	1    0    0    -1  
